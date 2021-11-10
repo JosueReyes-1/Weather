@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Oswald:wght@300;400&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    /* dia */
+    --color-section1-light:#79A3B1;
+    --color-section2-light:#D0E8F2;
+    --color-box-light:#79A3B1;
+    --color-text1-light:#FCF8EC;
+    --color-text2-light:#E8E8E8;
+    --color-text3-light:#CFCFCF;
+    --color-text4-light:#1a1818;
+
+    /* noche */
+    --color-section1-dark:#16213E;
+    --color-section2-dark:#1A1A2E;
+    --color-box-dark:#16213E;
+    --color-text1:#FCF8EC;
+    --color-text2:#BCB7B7;
+    --color-text3:#7B7B7B;
+
+    --letra-number: 'Bad Script', cursive;
+    --letra-number2: 'Oswald', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Oswald', sans-serif; 
+}
+
+/* nav */
+.nav{
+    width: 100%;
+    height: 80px;
+    background-color:transparent;
+    position: absolute;
+}
+.nav-container{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.nav-section1{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items:right;
+    margin: auto;
+}
+.busqueda{
+    display: flex;
+    width: 170px;
+    height: 40px;
+    justify-content: center;
+    background-color: var(--color-box-light);
+    align-items: center;
+}
+.switch{
+    background-color: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+.switch::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position:absolute;
+    background: #f1f1f1;
+    top:0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+.switch.active{
+    background-color: orange;
+    color: #000;
+}
+.switch.active::after{
+    right: 0;
+    left: unset;
+}
+.switch span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+
+.buttom-circle{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    font-size: 30px;
+    margin-right: 20px;
+}
+.nav-section2{
+    width: 70%;
+    display: flex;
+    justify-content: right;
+    align-items:right;
+}
+
+
+/* weather */
+
+.weather{
+    width: 100%;
+    height: 1010px;
+}
+.weather-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: auto;
+}
+.weather-section1{
+    width: 30%;
+    height: 100%;
+    background-color: var(--color-section1-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: .3s ease all;
+}
+.section1-container{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    
+
+}
+.section1-container img{
+    height: 400px;
+    margin: auto;
+}
+.info-section1{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    margin: auto;
+    
+}
+.info-section1 h1{
+    font-size: 80px;
+    font-family: var(--letra-number);
+    font-weight: 700;
+    color: var(--color-text1-light);
+}
+.info-section1 h3{
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--color-text3-light);
+}
+.info-section1 h4{
+    font-size: 30px;
+    color: var(--color-text3-light);
+}
+
+.weather-section2{
+    width: 70%;
+    height: 100%;
+    background-color: var(--color-section2-light);
+    transition: .3s ease all;
+}
+.section2-container{
+    width: 100%;
+    height: 100%;
+}
+.cards-container{
+    height: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 150px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    justify-content: center;
+    margin-left: 40px;
+    background-color: var(--color-box-light);
+}
+.card h2{
+    font-size: 25px;
+    color: var(--color-text1-light);
+}
+.card img{
+    height: 100px;
+}
+.card-info{
+    width: 80%;
+    display: flex;
+    justify-content:space-between;
+}
+
+.rectangles-container{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+}
+.rectangle{
+    width: 450px;
+    height: 230px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-box-light);
+}
+.rectangle h2{
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--color-text1-light);
+}
+.rectangle h1{
+    font-size: 50px;
+    font-family: var(--letra-number);
+    color: var(--color-text1-light);
+}
+
+
+/* --dark-- */
+body.dark .weather-section1{
+    background: var(--color-section1-dark);
+}
+body.dark .weather-section2{
+    background-color: var(--color-section2-dark);
+}
+body.dark .rectangle {
+    background-color: var(--color-box-dark);
+}
+body.dark .card{
+    background-color: var(--color-box-dark);
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4b4904c41c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Clima</title>
+</head>
+<body onload="onLoad()">
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-section1">
+
+                <button class="switch" id="switch">
+                    <span><i class="fas fa-sun"></i></span>
+                    <span><i class="fas fa-moon"></i></span>
+                </button>
+            
+            </div>
+            <div class="nav-section2">
+                <a href="" class="buttom-circle"><i class="fas fa-moon"></i></a>
+                <a href="" class="buttom-circle"><i class="fas fa-moon"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="weather">
+        <div class="weather-container">
+            <div class="weather-section1">
+                <div class="section1-container">
+                    <img src="imagenes/noche-tormenta.svg" alt="">
+                    <div class="info-section1">
+                        <h1 id="temperature"></h1>
+                        <h3 id="description"></h3>
+                        <h3 id="location"></h3>
+                        <h4 id="date"></h4>
+                        <h4 id="hora"></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="weather-section2">
+                <div class="section2-container">
+                    <div class="cards-container">
+                        <div class="card">
+                            <h2 id="day1">Tomorrow</h2>
+                            <img src="imagenes/sol-con-nubes.svg" alt="">
+                            <div class="card-info">
+                                <h2 id="max_1"></h2>
+                                <h2 id="min_1"></h2>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h2 id="day1">Tomorrow</h2>
+                            <img src="imagenes/sol-con-nubes.svg" alt="">
+                            <div class="card-info">
+                                <h2 id="max_2"></h2>
+                                <h2 id="min_2"></h2>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h2 id="day1">Tomorrow</h2>
+                            <img src="imagenes/sol-con-nubes.svg" alt="">
+                            <div class="card-info">
+                                <h2 id="max_3"></h2>
+                                <h2 id="min_3"></h2>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h2 id="day1">Tomorrow</h2>
+                            <img src="imagenes/sol-con-nubes.svg" alt="">
+                            <div class="card-info">
+                                <h2 id="max_4"></h2>
+                                <h2 id="min_4"></h2>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h2 id="day1">Tomorrow</h2>
+                            <img src="imagenes/sol-con-nubes.svg" alt="">
+                            <div class="card-info">
+                                <h2 id="max_5"></h2>
+                                <h2 id="min_5"></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rectangles-container">
+                        <div class="rectangles-section1">
+                            <div class="rectangle">
+                                <h2>wind status</h2>
+                                <h1 id="wind"></h1>
+                            </div>
+                            <div class="rectangle">
+                                <h2>Humedad</h2>
+                                <h1 id="humidity">84</h1>
+                            </div>
+                        </div>
+                        <div class="rectangles-section2">
+                            <div class="rectangle">
+                                <h2>visibilidad </h2>
+                                <h1 id="visibility"></h1>
+                            </div>
+                            <div class="rectangle">
+                                <h2>presion del aire</h2>
+                                <h1 id="pressure">998</h1>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
