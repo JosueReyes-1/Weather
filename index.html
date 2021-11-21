@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="index.css">
     <title>Clima</title>
 </head>
-<body onload="onLoad()">
+<body class="hidden" onload="onLoad()">
+    <div class="precarga " id="onload">
+        <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_jmgekfqg.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+    </div>
+
     <nav class="nav">
         <div class="nav-container">
             <div class="nav-section1">
-
                 <button class="switch" id="switch">
                     <span><i class="fas fa-sun"></i></span>
                     <span><i class="fas fa-moon"></i></span>
@@ -20,8 +23,10 @@
             
             </div>
             <div class="nav-section2">
-                <a href="" class="buttom-circle"><i class="fas fa-moon"></i></a>
-                <a href="" class="buttom-circle"><i class="fas fa-moon"></i></a>
+                <button class="switch2" id="switch2">
+                    <span class="iconify" data-icon="mdi:temperature-celsius"></span>
+                    <span class="iconify" data-icon="mdi:temperature-fahrenheit"></span>
+                </button>
             </div>
         </div>
     </nav>
@@ -30,7 +35,7 @@
         <div class="weather-container">
             <div class="weather-section1">
                 <div class="section1-container">
-                    <img src="imagenes/noche-tormenta.svg" alt="">
+                    <div id="img_weather"></div>
                     <div class="info-section1">
                         <h1 id="temperature"></h1>
                         <h3 id="description"></h3>
@@ -113,8 +118,9 @@
     </div>
 
 
-
-
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="app.js"></script>
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
 </body>
 </html>

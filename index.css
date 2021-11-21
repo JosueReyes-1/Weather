@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Oswald:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=IBM+Plex+Sans&family=Oswald:wght@300;400&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Oswald:wght@300;400&family=Quicksand&display=swap');
 *{
     padding: 0px;
     margin: 0px;
@@ -23,9 +23,11 @@
     --color-text2:#BCB7B7;
     --color-text3:#7B7B7B;
 
-    --letra-number: 'Bad Script', cursive;
-    --letra-number2: 'Oswald', sans-serif;
+    --letra-number: 'Quicksand', sans-serif;
 }
+
+
+    
 a{
     text-decoration: none;
 }
@@ -33,7 +35,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    font-family: 'Oswald', sans-serif; 
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 /* nav */
@@ -121,14 +123,54 @@ body{
     display: flex;
     justify-content: right;
     align-items:right;
+    margin-right: 50px;
 }
-
-
+.switch2{
+    
+    background-color: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+.switch2::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position:absolute;
+    background: #f1f1f1;
+    top:0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+.switch2.active{
+    color: #000;
+}
+.switch2.active::after{
+    right: 0;
+    left: unset;
+}
+.iconify{
+    color: white; 
+    height: 30px; 
+    width: 30px;
+    padding: 5px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
 /* weather */
 
 .weather{
     width: 100%;
-    height: 1010px;
+    height: 100vh;
 }
 .weather-container{
     width: 100%;
@@ -227,6 +269,10 @@ body{
     display: flex;
     justify-content:space-between;
 }
+.card-info h2{
+    font-size: 20px;
+    font-family: var(--letra-number);
+}
 
 .rectangles-container{
     width: 100%;
@@ -271,4 +317,21 @@ body.dark .rectangle {
 }
 body.dark .card{
     background-color: var(--color-box-dark);
+}
+
+
+
+
+.hidden{
+    overflow: hidden;
+}
+.precarga{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.pre-drak{
+    background-color: var(--color-section2-dark);
 }
